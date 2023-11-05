@@ -94,7 +94,7 @@ const handleSearch = () => {
         <Heading fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-          Course<Text as={'span'} color={'green.400'}>Search</Text>
+          Course<Text as={'span'} color={'green.400'}>Look</Text>
         </Heading>
         <Text color={'gray.500'} marginTop={8}>
           Pick your class, then type your query in the box below!
