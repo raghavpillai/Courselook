@@ -1,10 +1,11 @@
-# Project Title
+# CourseLook
 
 
 ## Features
 
 - Indexes a playlist of YouTube videos
 - Performs similarity search to find related videos
+- Can work on any playlist on Youtube
 
 ## Installation
 
