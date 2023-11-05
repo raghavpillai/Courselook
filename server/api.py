@@ -17,3 +17,25 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/", response_model=ResponseModel)
+async def default():
+    return ResponseModel(success=True, message={"working": True})
+
+@app.get(f"{ENDPOINT}/", response_model=ResponseModel)
+async def default_router():
+    return ResponseModel(success=True, message={"version": "v0.0.1"})
+
+@app.post(f"{ENDPOINT}/query", response_model=ResponseModel)
+async def test(query: Query):
+    print(query)
+    type = query.type
+    link = json.loads(query.content)
+    question = query.question
+
+    if not type or not link or not question:
+        return ResponseModel(success=False, message="Missing required fields")
+
+    return_message = Scraper.process_request(type, link, question)
+
+    return ResponseModel(success=True, message={"return": return_message})
