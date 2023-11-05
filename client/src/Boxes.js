@@ -1,0 +1,112 @@
+import React from 'react';
+import { Box, Flex, Text } from '@chakra-ui/react';
+
+function Boxes({ result1, result2, result3 }) {
+    return (
+        <Flex
+            direction="row"
+            w="100%" // Set the width to 100% to make it fill the page horizontally
+            // h="60vh" // Set the height of the container to 60vh for the entire viewport height
+        //   bg="teal.1000"
+        >
+            <Box
+                flex="1" // Let this box fill the available vertical space (bottom half)
+                border="3px solid #ADD8E6" // Add a thin white border
+                mx={2}
+            >
+                {/* {result1} */}
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src={result1["video_id"]}
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <Text>
+                    {`score: ${result1['score']}`}
+                </Text>
+                <Text>
+                    {`${result1['timestamp']}-${result1['timestamp']}`}
+                </Text>
+                <div
+          style={{
+            height: '280px', // Set the height of the scrollable area
+            overflowY: 'auto', // Make the container scrollable vertically
+          }}
+        >
+                <Text textAlign="left" marginLeft={8}>
+                    {result1['contents'].map((obj) => <Text fontWeight={obj['selected'] ? "bold" : "normal"}  >{obj['text']}</Text>)}
+                </Text>
+                </div>
+            </Box>
+            <Box
+                flex="1" // Each box within the flex container will fill the horizontal space evenly
+                border="3px solid #ADD8E6" // Add a thin white border
+                mx={2}
+            >
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src={result2['video_id']}
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <Text>
+                {`distance: ${result2['score']}`}
+
+                </Text>
+                <Text>
+                {`${result2['timestamp']}-${result2['timestamp']}`}
+                </Text>
+                <div
+          style={{
+            height: '280px', // Set the height of the scrollable area
+            overflowY: 'auto', // Make the container scrollable vertically
+          }}
+        >
+                <Text textAlign="left" marginLeft={8}>
+                    {result2['contents'].map((obj) => <Text fontWeight={obj['selected'] ? "bold" : "normal"}  >{obj['text']}</Text>)}
+                </Text>
+                </div>
+            </Box>
+            <Box
+                flex="1" // Each box within the flex container will fill the horizontal space evenly
+                border="3px solid #ADD8E6" // Add a thin white border
+                mx={2}
+            >
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src={result3['video_id']}
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <Text>
+                {`distance: ${result3['score']}`}
+
+                </Text>
+                <Text>
+                {`${result3['timestamp']}-${result3['timestamp']}`}
+                </Text>
+                <div
+          style={{
+            height: '280px', // Set the height of the scrollable area
+            overflowY: 'auto', // Make the container scrollable vertically
+          }}
+        >
+                <Text textAlign="left" marginLeft={8}>
+                    {result3['contents'].map((obj) => <Text fontWeight={obj['selected'] ? "bold" : "normal"}  >{obj['text']}</Text>)}
+                </Text>
+                </div>
+            </Box>
+        </Flex>
+    );
+}
+
+export default Boxes;
