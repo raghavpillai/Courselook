@@ -112,7 +112,7 @@ class Scraper:
             return transcript
 
     @classmethod
-    def get_video_links(cls, playlist_url):
+    def get_video_links(cls, playlist_url: str):
         playlist = Playlist(playlist_url)
         video_links = [video.watch_url for video in playlist.videos]
         return video_links
