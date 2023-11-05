@@ -23,7 +23,7 @@ export default function Navbar() {
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'} > {/* justifyContent={'space-between'} */}
-                    <Box>CourseSearch</Box>
+                    <Box><Text as={'span'} color={'green.400'}>Course</Text>look</Box>
                     <Stack direction='row' ml="auto">
                         <ColorModeSwitcher/>
                         <Flex alignItems={'center'} ml="auto">
@@ -37,7 +37,7 @@ export default function Navbar() {
                                         minW={0}>
                                         <Avatar
                                             size={'sm'}
-                                            src={'https://cs162.org/static/site/cs162bean.png'}
+                                            src={'https://media.licdn.com/dms/image/D5603AQFS8B4OYX0UBQ/profile-displayphoto-shrink_800_800/0/1682187019833?e=1704931200&v=beta&t=Lnb5gzqF471AT3P4kgERSKrrBx-dxULMTmQakQJahg0'}
                                         />
                                     </MenuButton>
                                     <MenuList alignItems={'center'}>
@@ -45,7 +45,7 @@ export default function Navbar() {
                                         <Center>
                                             <Avatar
                                                 size={'2xl'}
-                                                src={'https://cs162.org/static/site/cs162bean.png'}
+                                                src={'https://media.licdn.com/dms/image/D5603AQFS8B4OYX0UBQ/profile-displayphoto-shrink_800_800/0/1682187019833?e=1704931200&v=beta&t=Lnb5gzqF471AT3P4kgERSKrrBx-dxULMTmQakQJahg0'}
                                             />
                                         </Center>
                                         <br />

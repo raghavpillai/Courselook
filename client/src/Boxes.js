@@ -38,7 +38,7 @@ function Boxes({ result1, result2, result3 }) {
                     <CircularProgressLabel>{parseFloat((result1['score'] * 100).toFixed(0))}%</CircularProgressLabel>
                 </CircularProgress>
                 <Box>
-                    <Text>{parseFloat(`${result1['timestamp'] / 60}`).toFixed(2)} m:s</Text>
+                    <Text>{parseFloat(`${result1['timestamp'] / 60}`).toFixed(2).replace('.', ':')}</Text>
                 </Box>
                 </Flex>
                 <div
