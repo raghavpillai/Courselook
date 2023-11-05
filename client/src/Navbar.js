@@ -15,6 +15,7 @@ import {
     useColorMode,
     Center,
 } from '@chakra-ui/react'
+import { ColorModeSwitcher } from './ColorModeSwitcher'
 
 
 export default function Navbar() {
