@@ -19,7 +19,6 @@ import {
   useColorModeValue,
   Input
 } from '@chakra-ui/react';
-import { Logo } from './Logo';
 import Navbar from './Navbar';
 import Verticalstack from './Verticalstack';
 import {useState, useEffect} from 'react';
