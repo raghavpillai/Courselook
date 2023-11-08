@@ -29,9 +29,9 @@ async def default_router():
 @app.post(f"{ENDPOINT}/query", response_model=ResponseModel)
 async def test(query: Query):
     print(query)
-    type = query.type
-    link = json.loads(query.content)
-    question = query.question
+    type: str = query.type
+    link: str = json.loads(query.content)
+    question: str = query.question
 
     if not type or not link or not question:
         return ResponseModel(success=False, message="Missing required fields")
