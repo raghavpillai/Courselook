@@ -102,15 +102,15 @@ function App() {
         <Stack
           as={Box}
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 10, md: 10 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            search for anything<br />
+            Search for anything<br />
             <Text as={'span'} color={'green.400'}>
-            across a playlist of videos
+            Across a playlist of videos
             </Text>
           </Heading>
           <Text color={'gray.500'}>
